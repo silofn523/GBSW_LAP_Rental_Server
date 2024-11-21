@@ -29,7 +29,7 @@ export class LapService {
       rentalUsers: dto.rentalUsers,
       rentalPurpose: dto.rentalPurpose,
       rentalStartTime: dto.rentalStartTime,
-      labName: dto.labName,
+      lapName: dto.lapName,
       userId: dto.userId,
       deletionRental: false,
       approvalRental: false
@@ -83,9 +83,7 @@ export class LapService {
       await this.deleteLap(id)
     }
 
-    if (update.approvalRental) {
-      await this.lap.update({ id }, dto)
-    }
+    await this.lap.update({ id }, dto)
   }
 
   public async deleteLap(id: number): Promise<void> {

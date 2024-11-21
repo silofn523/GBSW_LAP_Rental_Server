@@ -1,6 +1,6 @@
 import { ApiProperty, PartialType } from '@nestjs/swagger'
 import { CreateLapDto } from './create-lap.dto'
-import { IsBoolean, IsOptional } from 'class-validator'
+import { IsBoolean, IsOptional, IsString } from 'class-validator'
 
 export class UpdateLapDto extends PartialType(CreateLapDto) {
   @ApiProperty({
@@ -18,4 +18,12 @@ export class UpdateLapDto extends PartialType(CreateLapDto) {
   @IsOptional()
   @IsBoolean()
   public readonly approvalRental: boolean
+
+  @ApiProperty({
+    description: '빌릴 랩실 이름',
+    default: '3층 임베디드 실습실'
+  })
+  @IsString()
+  @IsOptional()
+  public readonly lapName: string
 }

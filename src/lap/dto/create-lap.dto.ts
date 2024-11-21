@@ -50,7 +50,7 @@ export class CreateLapDto {
   })
   @IsString()
   @IsNotEmpty()
-  public readonly labName: string
+  public readonly lapName: string
 
   @ApiProperty({
     description: '유저 고유ID',

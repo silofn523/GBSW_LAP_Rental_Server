@@ -94,11 +94,11 @@ export class Lap extends BaseEntity {
     default: '3층 임베디드 실습실'
   })
   @Column({
-    name: 'lab_Name',
+    name: 'lap_Name',
     type: 'varchar',
     nullable: false
   })
-  public readonly labName: string
+  public readonly lapName: string
 
   @ApiProperty({
     description: '유저 고유ID',

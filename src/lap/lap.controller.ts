@@ -137,7 +137,7 @@ export class LapController {
   }
 
   @ApiOperation({
-    summary: '삭제 혹은 대여 완료 요청 승인'
+    summary: '삭제 혹은 대여 완료 요청 승인, 랩실 배정'
   })
   @ApiBearerAuth()
   @Roles(RolesEnum.admin)
